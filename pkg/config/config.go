@@ -7,15 +7,15 @@ import (
 
 	"github.com/pelletier/go-toml"
 
-	"github.com/houqp/sqlvet/pkg/vet"
+	"github.com/houqp/sqlvet/pkg/matcher"
 )
 
 // Sqlvet project config
 type Config struct {
-	DbEngine        string               `toml:"db_engine"`
-	SchemaPath      string               `toml:"schema_path"`
-	BuildFlags      string               `toml:"build_flags"`
-	SqlFuncMatchers []vet.SqlFuncMatcher `toml:"sqlfunc_matchers"`
+	DbEngine        string                   `toml:"db_engine"`
+	SchemaPath      string                   `toml:"schema_path"`
+	BuildFlags      string                   `toml:"build_flags"`
+	SqlFuncMatchers []matcher.SqlFuncMatcher `toml:"sqlfunc_matchers"`
 }
 
 // Load sqlvet config from project root
